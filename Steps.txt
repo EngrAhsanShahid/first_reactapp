@@ -1,0 +1,7 @@
+create-react-app project_name
+
+npm install -g yarn
+
+yarn build
+
+surge ./build 
