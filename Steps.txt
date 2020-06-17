@@ -6,7 +6,7 @@ yarn build
 
 surge ./build
 
-
+surge token (if needed)
 
 # This is a basic workflow to help you get started with Actions
 
@@ -42,11 +42,25 @@ jobs:
         cmd: install
       
     - name: Creating build
-      run:yarn build
-      
+      run: yarn build
+
     - name: installing surge
       run: npm install -g surge
     - name: deploying on surge 
       run: surge ./build  http://first_reactapp.surge.sh/ --token ${{secrets.SURGE_TOKEN}}
+      
+
+
+Steps for command line:
+
+git status
+
+git diff file_name
+
+git add .
+
+git commit -m "message"
+
+git push
       
       
